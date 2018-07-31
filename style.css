@@ -1995,6 +1995,10 @@ a.list-group-item:focus,a.list-group-item:hover,button.list-group-item:focus,but
 	border-radius: 0
 }
 
+.container {
+	width: 100%;
+}
+
 .container article:last-of-type {
 	margin: 0 0 0
 }
