@@ -2,6 +2,15 @@
 
 	'use strict';
 
+	var linkImgToOrigin = function() {
+		$('.kratos-post-content img').each(function(i) {
+			if (this.parentNode.href) {
+				$(this).attr('layer-src', this.parentNode.href);
+				this.parentNode.href = 'javascript:;';
+			}
+		});
+	};
+
 	var shareMenu = function() {
 		$(".Share").click(function() {
 			$(".share-wrap").fadeToggle("slow");
@@ -242,6 +251,7 @@
 	}
 
 	$(function() {
+		linkImgToOrigin();
 		topStart();
 		mainMenu();
 		shareMenu();
